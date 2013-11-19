@@ -1,5 +1,21 @@
 # -*- coding: utf-8 -*-
 
+
+def customize_org_organisation(**attr):
+	table = current.s3db.org_organisation
+	table.year.label = T("Year Founded")
+	return attr
+	settings.ui.customize_org_organisation = customize_org_organisation
+
+def customize_org_office(**attr):
+	table = current.s3db.org_office
+	table.code.readable  = False
+	table.code.writable  = False
+	return attr
+	settings.ui.customize_org_office = customize_org_office
+
+
+
 try:
     # Python 2.7
     from collections import OrderedDict
@@ -20,6 +36,7 @@ settings = current.deployment_settings
 
     Deployers should ideally not need to edit any other files outside of their template folder
 """
+
 
 # Pre-Populate
 # http://eden.sahanafoundation.org/wiki/DeveloperGuidelines/PrePopulate

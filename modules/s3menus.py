@@ -1456,10 +1456,10 @@ class S3OptionsMenu(object):
                         M("Search", m="search"),
                         M("Import", m="import")
                     ),
-                    M("Offices", f="office")(
+                    M("Venues", f="office")(
                         M("New", m="create"),
                         M("List All"),
-                        M("Map", m="map"),
+			#M("Map", m="map"),
                         #M("Search", m="search"),
                         M("Import", m="import")
                     ),
